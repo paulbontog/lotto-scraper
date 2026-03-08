@@ -102,8 +102,17 @@ data = {
 }
 
 webhook_url = "https://rapao-n8n.hf.space/webhook/lotto-result"
+webhook_test_url = "https://rapao-n8n.hf.space/webhook-test/lotto-result"
 
-requests.post(webhook_url, json=data)
+# Send to production webhook
+response_prod = requests.post(webhook_url, json=data)
+# Send to test webhook
+response_test = requests.post(webhook_test_url, json=data)
+
+# Optionally check responses
+print("Production webhook response:", response_prod.status_code)
+print("Test webhook response:", response_test.status_code)
+
 
 
 
