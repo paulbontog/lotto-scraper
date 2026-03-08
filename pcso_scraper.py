@@ -92,3 +92,16 @@ for r in unique:
     print("=========================")
 
 
+
+import requests
+
+data = {
+    "game": "3D Lotto",
+    "date": "March 05 2026",
+    "time": "2:00 PM",
+    "result": "0-6-4"
+}
+
+webhook_url = "https://rapao-n8n.hf.space/webhook/lotto-result"
+
+requests.post(webhook_url, json=data)
