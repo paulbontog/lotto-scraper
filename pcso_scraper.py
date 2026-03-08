@@ -105,3 +105,4 @@ data = {
 webhook_url = "https://rapao-n8n.hf.space/webhook/lotto-result"
 
 requests.post(webhook_url, json=data)
+
