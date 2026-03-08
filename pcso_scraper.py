@@ -101,9 +101,10 @@ data = {
     "result": "0-6-4"
 }
 
-webhook_url = "https://rapao-n8n.hf.space/webhook-test/lotto-result"
+webhook_url = "https://rapao-n8n.hf.space/webhook/lotto-result"
 
 requests.post(webhook_url, json=data)
+
 
 
 
